@@ -17,7 +17,7 @@ affiliations:
  - name: Georgia Institute of Technology. Exoskeleton and Prosthetic Intelligent  Control (EPIC) lab.
    index: 1 
 date: 14 May 2021
-bibliography: ./doc/paper.bib
+bibliography: paper.bib
 
 # Optional fields if submitting to a AAS journal too, see this blog post:
 # #https://blog.joss.theoj.org/2018/12/a-new-collaboration-with-aas-publishing
