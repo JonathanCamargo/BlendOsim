@@ -39,7 +39,7 @@ The motion capture requires further processing to implement the analysis. For th
 
 As more complex scenarios are studied in the literature including obstacles and terrains of community ambulation such as stairs and ramps [@Brantley2018;@CHEN2018422;@Li2012], the dissemination of information would benefit from better visualization tools of the locomotion, where the 3D configuration of the human body is presented instead of only 2D plots with joint angle profiles. 
 
- We released `BlendOsim` as an open-source add-on for the 3D suite `Blender`. `BlendOsim` could enhance the visualization and the disemination of biomechanics in the classroom and publications. With this add-on the user can easily import OpenSim models, motion capture marker data and forceplate data into the a full open-source creative suite and 3D environment, and use it to generate scientific illustrations and animations.
+ We released `BlendOsim` as an open-source add-on for the 3D suite `Blender`. `BlendOsim` could enhance the visualization and the disemination of biomechanics in the classroom and publications. With this add-on the user can easily import OpenSim models, motion capture marker data and forceplate data into a full open-source creative suite and 3D environment, and use it to generate scientific illustrations and animations.
 
 # `BlendOsim` add-on
 
@@ -59,7 +59,7 @@ As an example, Figure 1. Shows the exposed user interface and a sample imported 
 
 # Dependencies
 
-`BlendOsim` is written in Python and works directly with the `Blender` version 2.80 or greater (latest version tested is 2.92). Since Blender does not support the vtp format, the add-on is preloaded with STL surface files for the Simbody model from Opensim. For new models, the user can refer to Paraview [Ahrens2005ParaViewAE] or any CAD software with vtp support to convert the model surfaces to stl. 
+`BlendOsim` is written in Python and works directly with  `Blender` version 2.80 or greater (latest version tested is 2.92). Since Blender does not support the vtp format, the add-on is preloaded with STL surface files for the Simbody model from Opensim. For new models, the user can refer to Paraview [Ahrens2005ParaViewAE] or any CAD software with vtp support to convert the model surfaces to stl. 
 
 
 # Acknowledgements
