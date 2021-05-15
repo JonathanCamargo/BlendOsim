@@ -14,10 +14,10 @@ authors:
     affiliation: "1" # (Multiple affiliations must be quoted)
 	
 affiliations:
- - name: Georgia Institute of Technology
+ - name: Georgia Institute of Technology. Exoskeleton and Prosthetic Intelligent  Control (EPIC) lab.
    index: 1 
 date: 14 May 2021
-bibliography: paper.bib
+bibliography: ./doc/paper.bib
 
 # Optional fields if submitting to a AAS journal too, see this blog post:
 # #https://blog.joss.theoj.org/2018/12/a-new-collaboration-with-aas-publishing
@@ -33,9 +33,9 @@ With `BlendOsim` the user can surpass the limited visualization from OpenSim by 
 
 # Statement of need
 
-Biomechanic analysis of human locomotion requires the observation of the trajectories of a system with multiple degrees of freedom. This is achieved by recording the kinematics and external forces of the task with motion capture tools. Motion capture solutions includes specialized proprietary software for data adquisition but it is limited to rudimentary visualization of raw marker data \cite{Furtado:2019, Pearson:2017,s17071591}.
+Biomechanic analysis of human locomotion requires the observation of the trajectories of a system with multiple degrees of freedom. This is achieved by recording the kinematics and external forces of the task with motion capture tools. Motion capture solutions includes specialized proprietary software for data adquisition but it is limited to rudimentary visualization of raw marker data `[Furtado:2019;Pearson:2017;s17071591]`.
 
-The motion capture data requires further processing to implement the analysis. For this, OpenSim has achieved recognition in the field for the deployment and calculation of bimechanics models and performing motion analysis including inverse kinematics, inverse dynamics and even forward dynamics simulations \cite{4352056}. However, the visualization tools of the software are still limited, offering low resolution images, no user 3D scope and no simple solution to include background and external objects that exist in the experimental terrain. 
+The motion capture data requires further processing to implement the analysis. For this, OpenSim has achieved recognition in the field for the deployment and calculation of bimechanics models and performing motion analysis including inverse kinematics, inverse dynamics and even forward dynamics simulations `[4352056]`. However, the visualization tools of the software are still limited, offering low resolution images, no user 3D scope and no simple solution to include background and external objects that exist in the experimental terrain. 
 
 As more complex scenarios are studied in the literature (e.g. obstacles, stairs, ramps) \cite{Brantley2018,CHEN2018422,Li2012}, the dissemination of information would benefit from better visualization tools of the locomotion where the 3D configuration of the human body is presented instead of 2D plots with the joint angle profiles. 
 
