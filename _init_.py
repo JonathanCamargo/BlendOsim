@@ -1,22 +1,22 @@
 bl_info = {
-    "name": "Osim",
+    "name": "BlendOsim",
     "category": "Import",
     "version": (0, 0, 1),
     "blender": (2, 80, 0),
 }
 
 import bpy
-import osim
-from osim.model import addModel
-from osim.common import readNames,loadAnimation
-from osim.markers import loadMarkers
-from osim.forces import loadForces
+import blendosim
+from blendosim.model import addModel
+from blendosim.common import readNames,loadAnimation
+from blendosim.markers import loadMarkers
+from blendosim.forces import loadForces
 import numpy as np
 
 import os
 
 rootpath=os.path.dirname(os.path.abspath(__file__))
-stlFolder=os.path.join(rootpath,'osim','resources')
+stlFolder=os.path.join(rootpath,'blendosim','resources')
 
 
 
@@ -58,7 +58,7 @@ class addModel(bpy.types.Operator):
     def execute(self, context):
         scene=context.scene
         mytool=scene.my_tool          
-        osim.model.addModel(mytool.modelfile,stlRoot=stlFolder)
+        blendosim.model.addModel(mytool.modelfile,stlRoot=stlFolder)
         return {'FINISHED'}
     
 class addMotion(bpy.types.Operator):
@@ -73,7 +73,7 @@ class addMotion(bpy.types.Operator):
         data = np.genfromtxt(csvFile, dtype=float, delimiter=',', names=True,skip_header=0) 
         objectNames=readNames(data.dtype.names[1:])          
         collection=bpy.data.collections['osimModel']        
-        osim.model.loadAnimation(collection,data,objectNames)
+        blendosim.model.loadAnimation(collection,data,objectNames)
         #bpy.context.scene.update()
         return {'FINISHED'}
     
@@ -86,7 +86,7 @@ class addMarkers(bpy.types.Operator):
         scene=context.scene
         mytool=scene.my_tool  
         csvFile=mytool.markersfile
-        osim.markers.loadMarkers(csvFile)
+        blendosim.markers.loadMarkers(csvFile)
         #bpy.context.scene.update()        
         return {'FINISHED'}
 
@@ -99,7 +99,7 @@ class addForces(bpy.types.Operator):
         scene=context.scene
         mytool=scene.my_tool  
         csvFile=mytool.forcesfile
-        osim.forces.loadForces(csvFile)
+        blendosim.forces.loadForces(csvFile)
         #bpy.context.scene.update()        
         return {'FINISHED'}
 

@@ -23,6 +23,7 @@ With this tab you can import:
 
 - **Motion file**: a csv file containing the location and rotation for every segment in the model at each animation keyframe to animate. This option constructs the trajectories for the loaded model file.
 
-
+Try the files in the example folder!
+![This is what you would see](doc/bones.png)
 
 
