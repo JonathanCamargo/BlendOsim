@@ -33,11 +33,11 @@ With `BlendOsim` the user can surpass the limited visualization from OpenSim by 
 
 # Statement of need
 
-Biomechanic analysis of human locomotion requires the observation of the trajectories of a system with multiple degrees of freedom. This is achieved by recording the kinematics and external forces of the task with motion capture tools. Motion capture solutions includes specialized proprietary software for data adquisition but it is limited to rudimentary visualization of raw marker data [Furtado:2019;Pearson:2017;s17071591].
+Biomechanic analysis of human locomotion requires the observation of the trajectories of a system with multiple degrees of freedom. This is achieved by recording the kinematics and external forces of the task with motion capture tools. Motion capture solutions includes specialized proprietary software for data adquisition but it is limited to rudimentary visualization of raw marker data [@Furtado:2019;@Pearson:2017;@s17071591].
 
-The motion capture data requires further processing to implement the analysis. For this, OpenSim has achieved recognition in the field for the deployment and calculation of bimechanics models and performing motion analysis including inverse kinematics, inverse dynamics and even forward dynamics simulations [4352056]. However, the visualization tools of the software are still limited, offering low resolution images, no user 3D scope and no simple solution to include background and external objects that exist in the experimental terrain. 
+The motion capture data requires further processing to implement the analysis. For this, OpenSim has achieved recognition in the field for the deployment and calculation of bimechanics models and performing motion analysis including inverse kinematics, inverse dynamics and even forward dynamics simulations [@4352056]. However, the visualization tools of the software are still limited, offering low resolution images, no user 3D scope and no simple solution to include background and external objects that exist in the experimental terrain. 
 
-As more complex scenarios are studied in the literature (e.g. obstacles, stairs, ramps) [Brantley2018;CHEN2018422;Li2012], the dissemination of information would benefit from better visualization tools of the locomotion where the 3D configuration of the human body is presented instead of 2D plots with the joint angle profiles. 
+As more complex scenarios are studied in the literature (e.g. obstacles, stairs, ramps) [@Brantley2018;@CHEN2018422;@Li2012], the dissemination of information would benefit from better visualization tools of the locomotion where the 3D configuration of the human body is presented instead of 2D plots with the joint angle profiles. 
 
  We released `BlendOsim` as an open-source add-on for the 3D suite `Blender`. `BlendOsim` could help the visualization and disemination of biomechanics in the classroom and publications. With this add-on the user can easily import OpenSim models, motion capture marker data and forceplate data into the a full creative suite and 3D environment and use it to generate scientific illustrations and animations.
 
@@ -53,9 +53,9 @@ The `BlendOsim` add-on exposes the interface as tools tab containing options to 
 
 **Motion file**: a csv file containing the location and rotation for every segment in the model at each animation keyframe to animate. This option constructs the trajectories for the loaded model file.
 
-As an example, Figure 1. Shows the exposed user interface and a sample imported model and motion capture data. See more use examples in the gait cycle figures in [CAMARGO2021110320].
+As an example, Figure 1. Shows the exposed user interface and a sample imported model and motion capture data. See more use examples in the gait cycle figures in [@CAMARGO2021110320].
 
-![User interface for BlendOsim. The user can import markers, forces, models and motion files](preview.png){ width=20% } 
+![User interface for BlendOsim. The user can import markers, forces, models and motion files](preview.png){ width=50%}
 
 # Dependencies
 
