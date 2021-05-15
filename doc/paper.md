@@ -26,24 +26,24 @@ bibliography: paper.bib
 ---
 
 # Summary
-`BlendOsim` is an Python add-on for the opensource 3D creation suite `Blender` for improved visualizations in biomechanics research.  The add-on allows to import motion capture markers and forceplate data. Furthermore, it allows importing OpenSim models and motion trajectories, enabling a complete visualization tool for biomechanics experiments based on motion capture.
+`BlendOsim` is an Python add-on for the opensource 3D creation suite `Blender`, This add-on enables improved visualizations for biomechanics research.  `BlendOsim` allows to importing motion capture markers and forceplate data. Furthermore, it enables importing OpenSim models and motion trajectories, offering a richer visualization tool for biomechanics experiments based on motion capture.
 
-With `BlendOsim` the user can surpass the limited visualization from OpenSim by leveraging on the more robust 3D visuals from `Blender` and its advanced rendering features. For example, you can create renders and multi-camera video sequences that illustrate the experiment, or use the annotate functions to put 3D notes and support the scientific discussion of the biomechanics data.
+With `BlendOsim` the user can surpass the limited visualization from OpenSim by leveraging on the more robust 3D visuals from `Blender` and its advanced rendering features. For example, the user can create renders and multi-camera video sequences that illustrate the experiment, or use the annotate functions to put 3D notes and support the scientific discussion of the biomechanics data.
 
 
 # Statement of need
 
-Biomechanic analysis of human locomotion requires the observation of the trajectories of a system with multiple degrees of freedom. This is achieved by recording the kinematics and external forces of the task with motion capture tools. Motion capture solutions includes specialized proprietary software for data adquisition but it is limited to rudimentary visualization of raw marker data [@Furtado:2019;@Pearson:2017;@s17071591].
+Biomechanic analyses of human locomotion require the observation of the trajectories of systems with multiple degrees of freedom. This is achieved by recording the kinematics and external forces of the task with motion capture tools. Motion capture solutions include specialized proprietary software for data adquisition but they are limited to only rudimentary visualization of raw marker data [@Furtado:2019;@Pearson:2017;@s17071591].
 
-The motion capture data requires further processing to implement the analysis. For this, OpenSim has achieved recognition in the field for the deployment and calculation of bimechanics models and performing motion analysis including inverse kinematics, inverse dynamics and even forward dynamics simulations [@4352056]. However, the visualization tools of the software are still limited, offering low resolution images, no user 3D scope and no simple solution to include background and external objects that exist in the experimental terrain. 
+The motion capture requires further processing to implement the analysis. For this, OpenSim has achieved recognition in the field for the calculation of bimechanics models and performing motion analysis including inverse kinematics, inverse dynamics and even forward dynamics simulations [@4352056]. However, the visualization tools of the software are still limited, offering low resolution images, no user 3D scope and no simple solution to include background and external objects that exist in the experimental terrain. 
 
-As more complex scenarios are studied in the literature (e.g. obstacles, stairs, ramps) [@Brantley2018;@CHEN2018422;@Li2012], the dissemination of information would benefit from better visualization tools of the locomotion where the 3D configuration of the human body is presented instead of 2D plots with the joint angle profiles. 
+As more complex scenarios are studied in the literature including obstacles and terrains of community ambulation such as stairs and ramps [@Brantley2018;@CHEN2018422;@Li2012], the dissemination of information would benefit from better visualization tools of the locomotion, where the 3D configuration of the human body is presented instead of only 2D plots with joint angle profiles. 
 
- We released `BlendOsim` as an open-source add-on for the 3D suite `Blender`. `BlendOsim` could help the visualization and disemination of biomechanics in the classroom and publications. With this add-on the user can easily import OpenSim models, motion capture marker data and forceplate data into the a full creative suite and 3D environment and use it to generate scientific illustrations and animations.
+ We released `BlendOsim` as an open-source add-on for the 3D suite `Blender`. `BlendOsim` could enhance the visualization and the disemination of biomechanics in the classroom and publications. With this add-on the user can easily import OpenSim models, motion capture marker data and forceplate data into the a full open-source creative suite and 3D environment, and use it to generate scientific illustrations and animations.
 
 # `BlendOsim` add-on
 
-The `BlendOsim` add-on exposes the interface as tools tab containing options to import four data types.
+The `BlendOsim` add-on exposes its interface as a tab in the tools panel, containing options to import four data types.
 
 **Markers file**: takes a csv file containing the xyz trajectories of the markers in the motion capture recorded in the experiment. This import option inserts mesh spheres, labels, and animates the trajectory location at every keyframe.
 
@@ -55,7 +55,7 @@ The `BlendOsim` add-on exposes the interface as tools tab containing options to 
 
 As an example, Figure 1. Shows the exposed user interface and a sample imported model and motion capture data. See more use examples in the gait cycle figures in [@CAMARGO2021110320].
 
-![User interface for BlendOsim. The user can import markers, forces, models and motion files](preview.png){ width=50%}
+![User interface for BlendOsim. The user can import markers, forces, models and motion files](preview.png){ width=90%}
 
 # Dependencies
 
