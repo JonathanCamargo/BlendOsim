@@ -5,11 +5,11 @@ An add-on to import Opensim and motion capture data to Blender
 
 To install, download the repository into a zip file.  and install from Blender->Preferences.
 
-BlendOsim has been tested in blender from version 2.8 up to 2.92. If you need to use a different versions and encounter issues please submit an issue. I will do my best to help.
+BlendOsim has been tested in blender from version 2.8 up to 2.92. If you need to use a different version and encounter issues please submit an issue. I will do my best to help.
 
 ## Getting started
 
-After installing and enabling the add-on, a new tab will appear at your tools panel **BlendOsim**. 
+After installing and enabling the add-on, a new tab will appear at your tools panel: **BlendOsim**. 
 
 ![Options added to the tools panel](doc/toolspanel.png)
 
