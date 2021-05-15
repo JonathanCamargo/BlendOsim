@@ -1,2 +1,28 @@
 # BlendOsim
 An add-on to import Opensim and motion capture data to Bender
+
+## Installation
+
+To install, download the repository into a zip file.  and install from Blender->Preferences.
+
+BlendOsim has been tested in blender from version 2.8 up to 2.92. If you need to use a different versions and encounter issues please submit an issue. I will do my best to help.
+
+## Getting started
+
+After installing and enabling the add-on, a new tab will appear at your tools panel **BlendOsim**. 
+
+![Options added to the tools panel](doc/toolspanel.png)
+
+With this tab you can import:
+
+- **Markers file**: takes a csv file containing the xyz trajectories of the markers in the motion capture recorded in the experiment. This import option inserts mesh spheres, labels, and animates the trajectory location at every keyframe.
+
+- **Forces file**: takes a csv file containing the force, moments and center of pressure for the forceplate data recorded in the experiment.This import option inserts mesh arrows with the tail located at the center of pressure, pointing and scaled in the direction of the force. The location and magnitude of the force is animated at every keyframe provided in the csv file.
+
+- **Model file**: corresponds to the description of the biomechanics model in .osim format. Adding the model will add STL surfaces parented to empty objects that can be later used for animation. 
+
+- **Motion file**: a csv file containing the location and rotation for every segment in the model at each animation keyframe to animate. This option constructs the trajectories for the loaded model file.
+
+
+
+
