@@ -33,47 +33,33 @@ With `BlendOsim` the user can surpass the limited visualization from OpenSim by 
 
 # Statement of need
 
-Biomechanic analysis of human locomotion requires the observation of the trajectories of a system with multiple degrees of freedom. This is often achieved by recording the kinematics and external forces of the task with motion capture tools. Motion capture solutions includes specialized proprietary software with rudimentary visualization that is limited to the raw marker data \cite{Vicon, Optitrack}.
+Biomechanic analysis of human locomotion requires the observation of the trajectories of a system with multiple degrees of freedom. This is achieved by recording the kinematics and external forces of the task with motion capture tools. Motion capture solutions includes specialized proprietary software for data adquisition but it is limited to rudimentary visualization of raw marker data \cite{Furtado:2019, Pearson:2017,s17071591}.
 
-OpenSim has achieved recognition in the field for developing models and perform motion analysis including inverse kinematics, inverse dynamics and even forward dynamics simulations \cite{opensim}. However, the visualization tools of the software are still limited offering low resolution images, no user 3D scope or loading of background and external objects that exist in the experimental terrain. 
+The motion capture data requires further processing to implement the analysis. For this, OpenSim has achieved recognition in the field for the deployment and calculation of bimechanics models and performing motion analysis including inverse kinematics, inverse dynamics and even forward dynamics simulations \cite{4352056}. However, the visualization tools of the software are still limited, offering low resolution images, no user 3D scope and no simple solution to include background and external objects that exist in the experimental terrain. 
 
-As more complex scenarios are studied in the literature (e.g. obstacles, stairs, ramps) \cite{sawicki, otros}, the dissemination of information would benefit from better visualization tools of the locomotion where the 3D configuration of the human body is presented instead of 2D plots with the joint angle profiles. 
+As more complex scenarios are studied in the literature (e.g. obstacles, stairs, ramps) \cite{Brantley2018,CHEN2018422,Li2012}, the dissemination of information would benefit from better visualization tools of the locomotion where the 3D configuration of the human body is presented instead of 2D plots with the joint angle profiles. 
 
- We release `BlendOsim` as an open-source add-on for the 3D suite `Blender`. `BlendOsim` could help the visualization and disemination of biomechanics in the classroom and publications. With this add-on the user can easily import OpenSim models, motion capture marker data and forceplate data into the 3D environment and use it to generate scientific illustrations and animations.
+ We released `BlendOsim` as an open-source add-on for the 3D suite `Blender`. `BlendOsim` could help the visualization and disemination of biomechanics in the classroom and publications. With this add-on the user can easily import OpenSim models, motion capture marker data and forceplate data into the a full creative suite and 3D environment and use it to generate scientific illustrations and animations.
 
 # `BlendOsim` add-on
 
 The `BlendOsim` add-on exposes the interface as tools tab containing options to import four data types.
 
-**Markers file**: a csv file containing the xyz trajectories of the markers in the motion capture recorded in the experiment.
+**Markers file**: takes a csv file containing the xyz trajectories of the markers in the motion capture recorded in the experiment. This import option inserts mesh spheres, labels, and animates the trajectory location at every keyframe.
 
-**Forces file**: a csv file containing the force, moments and center of pressure for the forceplate data recorded in the experiment.
+**Forces file**: takes a csv file containing the force, moments and center of pressure for the forceplate data recorded in the experiment.This import option inserts mesh arrows with the tail located at the center of pressure, pointing and scaled in the direction of the force. The location and magnitude of the force is animated at every keyframe provided in the csv file.
 
 **Model file**: corresponds to the description of the biomechanics model in .osim format. Adding the model will add STL surfaces parented to empty objects that can be later used for animation. 
 
-**Motion file**: a csv file containing the location and rotation for every segment in the model at each animation keyframe.
+**Motion file**: a csv file containing the location and rotation for every segment in the model at each animation keyframe to animate. This option constructs the trajectories for the loaded model file.
+
+As an example, Figure 1. Shows the exposed user interface and a sample imported model and motion capture data. See more use examples in the gait cycle figures in \cite{CAMARGO2021110320}.
 
 ![User interface for BlendOsim. The user can import markers, forces, models and motion files](preview.png){ width=20% } 
 
 # Dependencies
 
 `BlendOsim` is written in Python and works directly with the `Blender` version 2.80 or greater (latest version tested is 2.92). Since Blender does not support the vtp format, the add-on is preloaded with STL surface files for the Simbody model from Opensim. For new models, the user can refer to \cite{Paraview} or any CAD software with vtp support to convert the model surfaces to stl. 
-
-
-# Citations
-
-Citations to entries in paper.bib should be in
-[rMarkdown](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
-format.
-
-If you want to cite a software repository URL (e.g. something on GitHub without a preferred
-citation) then you can do it with the example BibTeX entry below for @fidgit.
-
-For a quick reference, the following citation commands can be used:
-- `@author:2001`  ->  "Author et al. (2001)"
-- `[@author:2001]` -> "(Author et al., 2001)"
-- `[@author1:2001; @author2:2001]` -> "(Author1 et al., 2001; Author2 et al., 2002)"
-
 
 
 # Acknowledgements
