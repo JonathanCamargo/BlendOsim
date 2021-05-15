@@ -55,7 +55,7 @@ The `BlendOsim` add-on exposes the interface as tools tab containing options to 
 
 As an example, Figure 1. Shows the exposed user interface and a sample imported model and motion capture data. See more use examples in the gait cycle figures in \cite{CAMARGO2021110320}.
 
-![User interface for BlendOsim. The user can import markers, forces, models and motion files](preview.png){ width=20% } 
+![User interface for BlendOsim. The user can import markers, forces, models and motion files](doc/preview.png){ width=20% } 
 
 # Dependencies
 
