@@ -59,7 +59,7 @@ As an example, Figure 1. Shows the exposed user interface and a sample imported 
 
 # Dependencies
 
-`BlendOsim` is written in Python and works directly with the `Blender` version 2.80 or greater (latest version tested is 2.92). Since Blender does not support the vtp format, the add-on is preloaded with STL surface files for the Simbody model from Opensim. For new models, the user can refer to \cite{Paraview} or any CAD software with vtp support to convert the model surfaces to stl. 
+`BlendOsim` is written in Python and works directly with the `Blender` version 2.80 or greater (latest version tested is 2.92). Since Blender does not support the vtp format, the add-on is preloaded with STL surface files for the Simbody model from Opensim. For new models, the user can refer to Paraview [Ahrens2005ParaViewAE] or any CAD software with vtp support to convert the model surfaces to stl. 
 
 
 # Acknowledgements
