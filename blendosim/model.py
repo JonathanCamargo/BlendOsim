@@ -14,7 +14,7 @@ from xml.dom import minidom
 
 import os.path
 
-from osim.common import readNames,loadAnimation
+from blendosim.common import readNames,loadAnimation
 
 defaultOsimPath='C:\\OpenSim 4.0\\Geometry'
 

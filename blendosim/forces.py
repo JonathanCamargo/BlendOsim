@@ -10,7 +10,7 @@ import numpy as np
 
 import math
 
-from osim.common import data2keyframes, loadAnimation, readNames
+from blendosim.common import data2keyframes, loadAnimation, readNames
 
 import os
 rootpath=os.path.dirname(os.path.abspath(__file__))

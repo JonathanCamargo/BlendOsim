@@ -10,7 +10,7 @@ import numpy as np
 
 import math
 
-from osim.common import data2keyframes, loadAnimation, readNames
+from blendosim.common import data2keyframes, loadAnimation, readNames
 
 def addMarker(collection,position=(0,0,0),rotation=(0,0,0),text="MARKER"):        
     #Add a marker to 3d space    
