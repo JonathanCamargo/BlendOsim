@@ -12,7 +12,7 @@ authors:
   - name: Aaron Young
     orcid:     
     affiliation: "1" # (Multiple affiliations must be quoted)
-	
+
 affiliations:
  - name: Georgia Institute of Technology. Exoskeleton and Prosthetic Intelligent  Control (EPIC) lab.
    index: 1 
