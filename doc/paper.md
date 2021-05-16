@@ -10,7 +10,7 @@ authors:
     orcid: 0000-0001-5219-2110
     affiliation: "1" # (Multiple affiliations must be quoted)
   - name: Aaron Young
-    orcid:     
+    orcid: 0000-0002-5376-2258     
     affiliation: "1" # (Multiple affiliations must be quoted)
 
 affiliations:
