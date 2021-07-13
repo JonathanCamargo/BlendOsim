@@ -11,13 +11,13 @@ from blendosim.model import addModel
 from blendosim.common import readNames,loadAnimation
 from blendosim.markers import loadMarkers
 from blendosim.forces import loadForces
+from blendosim.moments import loadMoments
 import numpy as np
 
 import os
 
 rootpath=os.path.dirname(os.path.abspath(__file__))
 stlFolder=os.path.join(rootpath,'blendosim','resources')
-
 
 
 class MyProperties(bpy.types.PropertyGroup):
@@ -35,7 +35,9 @@ class MyProperties(bpy.types.PropertyGroup):
     motionfile : bpy.props.StringProperty(
         name='Motion file',
         subtype="FILE_PATH")
-
+    momentsfile : bpy.props.StringProperty(
+        name='Moments file',
+        subtype="FILE_PATH")   
 
     
 
@@ -58,7 +60,7 @@ class addModel(bpy.types.Operator):
     def execute(self, context):
         scene=context.scene
         mytool=scene.my_tool          
-        blendosim.model.addModel(mytool.modelfile,stlRoot=stlFolder)
+        blendosim.model.addModel(bpy.path.abspath(mytool.modelfile),stlRoot=stlFolder)
         return {'FINISHED'}
     
 class addMotion(bpy.types.Operator):
@@ -69,7 +71,7 @@ class addMotion(bpy.types.Operator):
     def execute(self, context):
         scene=context.scene
         mytool=scene.my_tool  
-        csvFile=mytool.motionfile
+        csvFile=bpy.path.abspath(mytool.motionfile)
         data = np.genfromtxt(csvFile, dtype=float, delimiter=',', names=True,skip_header=0) 
         objectNames=readNames(data.dtype.names[1:])          
         collection=bpy.data.collections['osimModel']        
@@ -85,7 +87,7 @@ class addMarkers(bpy.types.Operator):
     def execute(self, context):
         scene=context.scene
         mytool=scene.my_tool  
-        csvFile=mytool.markersfile
+        csvFile=bpy.path.abspath(mytool.markersfile)
         blendosim.markers.loadMarkers(csvFile)
         #bpy.context.scene.update()        
         return {'FINISHED'}
@@ -98,14 +100,27 @@ class addForces(bpy.types.Operator):
     def execute(self, context):
         scene=context.scene
         mytool=scene.my_tool  
-        csvFile=mytool.forcesfile
+        csvFile=bpy.path.abspath(mytool.forcesfile)
         blendosim.forces.loadForces(csvFile)
+        #bpy.context.scene.update()        
+        return {'FINISHED'}
+
+class addMoments(bpy.types.Operator):
+    bl_idname = 'mesh.add_osim_moments'
+    bl_label = 'Add Moments'
+    bl_options = {'REGISTER', 'UNDO'}
+  
+    def execute(self, context):
+        scene=context.scene
+        mytool=scene.my_tool  
+        csvFile=bpy.path.abspath(mytool.momentsfile)
+        blendosim.moments.loadMoments(csvFile)
         #bpy.context.scene.update()        
         return {'FINISHED'}
 
 
 class panel1(bpy.types.Panel):
-    bl_idname = "panel.panel1"
+    bl_idname = "A1_panel.panel1_PT_blendosimlel"
     bl_label = "BlendOsim"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
@@ -126,6 +141,8 @@ class panel1(bpy.types.Panel):
         layout.operator("mesh.add_osim_markers",icon='MESH_UVSPHERE', text="Add Markers") 
         layout.prop(mytool,"forcesfile")            
         layout.operator("mesh.add_osim_forces",icon='EMPTY_SINGLE_ARROW', text="Add Forces") 
+        layout.prop(mytool,"momentsfile")            
+        layout.operator("mesh.add_osim_moments",icon='EMPTY_SINGLE_ARROW', text="Add Moments") 
         
 def register():
     print('Addon Registered')
@@ -134,6 +151,7 @@ def register():
     bpy.utils.register_class(addMotion)            
     bpy.utils.register_class(addMarkers)
     bpy.utils.register_class(addForces)
+    bpy.utils.register_class(addMoments)
     bpy.utils.register_class(panel1)
     bpy.utils.register_class(MyProperties)
     bpy.types.Scene.my_tool = bpy.props.PointerProperty(type=MyProperties)
@@ -145,6 +163,7 @@ def unregister():
     bpy.utils.unregister_class(addMotion)            
     bpy.utils.unregister_class(addMarkers)
     bpy.utils.unregister_class(addForces)
+    bpy.utils.unregister_class(addMoments)
     bpy.utils.unregister_class(panel1)
     bpy.utils.unregister_class(MyProperties)
 

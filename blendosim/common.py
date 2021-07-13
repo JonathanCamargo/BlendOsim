@@ -143,7 +143,7 @@ def loadAnimation(collection,data,objectNames):
             rotz=data[headerNames[headerIdx+5]]              
             headerIdx=headerIdx+6
             data2keyframes(obj,frames,locx=locx,locy=locy,locz=locz,rotx=rotx,roty=roty,rotz=rotz)
-    elif properties==9: #Location and rotation
+    elif properties==9: #Location and rotation and scale
         headerIdx=0
         for object in objectNames:
             obj=collection.objects[object]
